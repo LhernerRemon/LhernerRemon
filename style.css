@@ -262,12 +262,13 @@ body{
     .menu{
         display: block;
         position: absolute;
-        right: 10px;
+        right: 0;
         top:-260px;
         padding-top: 60px;
         background-color: rgba(0,0,0,.2);
         border-radius: 5px;
         transition: .3s;
+        position: fixed;
     }
     .menu a{
         display: block;

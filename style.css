@@ -26,6 +26,9 @@ p{
     align-items: center;
 
 }
+.menu-menu{
+    display: none;
+}
 .header-logoContainer img{
     margin: 0;
     width: 100%;
@@ -36,6 +39,11 @@ p{
     justify-content: flex-end;
     align-items: center;
     
+}
+.menu-imagen{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .menu a{
     color: #fff;
@@ -142,6 +150,7 @@ p{
 }
 .opiniones{
     grid-area: opinion;
+    display: flex;
 }
 .opiniones i{
     color: #fecc01;
@@ -150,14 +159,18 @@ p{
     color: #0a8ecd;
     padding-left: 15px;
 }
-.flex-video{
+.video-container{
     grid-area: video;
+
+}
+.flex-video{
     max-width: 450px;
     width: 100%;
     height: 0;
     padding-top: 254px;
     background-color: #2adb51;
     position: relative;
+    text-align: center;
 
 }
 .video{
@@ -212,19 +225,22 @@ p{
     display: grid;
     grid-template-columns: minmax(auto,1024px);
     justify-content: center;
+    align-items: center;
+    margin: 10px 5px;
 }
 .info-title{
     font-size: 28px;
     font-weight: 700;
+    text-align: center;
 }
 .information-container{
     display: grid;
-    grid-template-columns: repeat(2,minmax(400px,auto));
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
 .info-info{
     display: flex;
-    width: 80%;
+    align-items: center;
 }
 .info-info p{
     margin: 0;
@@ -248,6 +264,7 @@ p{
     font-weight: 700;
 }
 .partition-buttom{
+    margin-left: 40px;
     margin-bottom: 40px;
 }
 .partition-buttom button{
@@ -274,13 +291,14 @@ p{
 }
 
 
-
+/*------------------TEMARIO---------------*/
 
 .temary{
     display: grid;
     grid-template-columns: minmax(auto,1024px);
     justify-content: center;
     background-color: #f8f8f9;
+
 }
 .temary-title{
     text-align: center;
@@ -293,6 +311,7 @@ p{
 .temary-container{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(auto,490px));
+    justify-content: center;
     column-gap: 10px;
 }
 .tem-tem{
@@ -341,7 +360,7 @@ padding:10px;
 
 
 
-
+/*------------------RECOMENDADO---------------*/
 
 
 
@@ -408,7 +427,7 @@ padding:10px;
 
 
 
-
+/*------------------DIPLOMA---------------*/
 
 
 
@@ -467,7 +486,7 @@ padding:10px;
 
 
 
-
+/*------------------PROFESOR---------------*/
 
 
 .profesores{
@@ -515,8 +534,7 @@ padding:10px;
 }
 
 
-
-
+/*------------------PROYECTO---------------*/
 
 
 .proyecto{
@@ -574,7 +592,7 @@ padding:10px;
 
 
 
-
+/*------------------COMENTARIOS---------------*/
 
 
 
@@ -590,11 +608,11 @@ padding:10px;
 .comentarios-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .coment-coment{
     display: grid;
-    grid-template-columns: 48px 280px;
-    colu: 8px;
+    grid-template-columns: 48px minmax(auto,280px);
     grid-template-areas:
     "Cimagen Cname"
     "Cimagen Cstar"
@@ -633,7 +651,7 @@ padding:10px;
 
 
 
-
+/*------------------FOOTER---------------*/
 
 
 
@@ -716,10 +734,8 @@ padding:10px;
 }
 
 .footer-form{
-    background-color: #233945;
     width: auto;
     display: flex;
-   
     align-items: center;
 }
 .footer-form-info{
@@ -730,22 +746,262 @@ padding:10px;
 }
 .footer-form input{
     border: 1px solid #0a8ecd;
-   height: 48px;
-   margin: 30px 0;
-   box-sizing: border-box;
-   padding: 1em 15em 1em 2.5em;
-   color: #fff;
-   background-color: transparent;
+    height: 48px;
+    margin: 30px 0;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 14px;
+    margin-left: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .footer-form button{
     border: none;
-   height: 48px;
-   width: 150px;
-   box-sizing: border-box;
-   background-color: #0a8ecd;
-   color: #fff;
-   
+    height: 48px;
+    width: 150px;
+    box-sizing: border-box;
+    background-color: #0a8ecd;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .tytyty{
     text-align: center;
+}
+
+
+
+/*-------------MEDIA---------*/
+@media screen and (max-width:843px){
+    .header{
+        grid-template-columns: 80px 1fr 40px;
+        grid-template-areas:
+        "logo menu lupa"
+        ;
+    
+    }
+    .form{
+        display: flex;
+        grid-area: lupa;
+    }
+    .form input{
+        display: none; 
+    }
+    .form button{
+        display: inline-block;
+        border-radius: 5px;
+    }
+
+
+
+    .hero-container{
+        display: grid;
+        grid-template-columns: 70px 1fr 300px;
+        grid-template-rows: 110px 40px 130px 250px;
+        grid-template-areas:
+        "badge title forma"
+        " . opinion forma"
+        " . description description"
+        "video video video"
+        ;
+    }
+    .title{
+        font-size: 26px;
+    }
+    .opiniones{
+        display: block;
+    }
+    .opiniones a{
+        padding: 0;
+        padding-top: 10px;
+    }
+    .description{
+        padding: 10px;
+    }
+    .video-container{
+        display: flex;
+        justify-content: center;
+    }
+    .coment-coment{
+        margin: 10px;
+    }
+    
+}
+@media screen and (max-width:660px){
+    .header{
+        grid-template-columns: 70px 1fr 40px;
+        grid-template-areas:
+        "logo menufoto menumenu"
+        ;
+    
+    }
+    .menu-lista{
+        display: none;
+    }
+    .menu{
+        grid-area: menufoto;
+    }
+    .form{
+        display: none;
+    }
+    
+    .menu-menu{
+        grid-area: menumenu;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+
+    .hero-container{
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        grid-template-rows: 70px 40px 130px 250px;
+        grid-template-areas:
+        "badge title"
+        "badge opinion"
+        "description description"
+        "video video"
+        "forma forma"
+        ;
+    }
+    .badge{
+        height: 70px;
+    }
+    .badge img{
+        padding-top: 0;
+    }
+    .title{
+        display: inline-block;
+        height: 70px;
+    }
+
+
+    .aprende-primer button{
+        width: 100%;
+    }
+    .aprende-second button{
+        width: 90%;
+        margin: 5px;
+    }
+
+
+    .reconocimiento-container{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-areas: 
+        "Rdiploma"
+        "Rtitulo"
+        "Rdescription"
+        "Rbutton"
+        ;
+    }
+    .titulo-container{
+        margin: 20px 30px;
+    }
+    .reconocimiento-title,
+    .reconocimiento-comentario,
+    .reconocimiento-button{
+        text-align: center;
+        padding: 10px;
+    }
+
+
+
+    .proyecto-container{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-areas: 
+        "Pdiploma"
+        "Ptitulo"
+        "Pdescription"
+        "Pbutton"
+        ;
+    }
+    .proyecto-container{
+        margin: 20px 30px;
+    }
+    .proyecto-title,
+    .proyecto-comentario,
+    .proyecto-button{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .footer-footer{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    .footer-imageContainer{
+        margin: 0 auto;
+    }
+    .footer-ll{
+        margin-bottom: 10px;
+    }
+    .footer-guide{
+        background-color: #19303c;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .footer-guide li{
+        text-align: start;
+    }
+
+    .footer-form{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .footer-form input{
+        margin: 10px 0;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:424px){
+
+    .hero-container{
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: 100px 40px 250px 250px;
+        grid-template-areas:
+        "badge title"
+        "opinion opinion"
+        "description description"
+        "video video"
+        "forma forma"
+        ;
+    }
+    .partition-buttom{
+        margin: 0 auto;
+    }
+
+    .partition-buttom button{
+        width: 300px;
+    }
+    .footer-guide li{
+        width: 100%;
+    }
+    .information-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .info-info{
+        display: flex;
+        align-items: center;
+    }
+    .info-infoContainer{
+        width: 50px;
+        margin: 0;
+    }
+    .info-infoContainer img{
+        width: 100%;
+    }
+
+
 }

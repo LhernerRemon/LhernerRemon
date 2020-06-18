@@ -859,7 +859,7 @@ padding:10px;
     .hero-container{
         display: grid;
         grid-template-columns: 70px 1fr;
-        grid-template-rows: 70px 40px 130px 250px;
+        grid-template-rows: 70px 40px 150px 250px;
         grid-template-areas:
         "badge title"
         "badge opinion"

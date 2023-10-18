@@ -1,28 +1,42 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   ssr: false,
+  telemetry: false,
+  css: ['assets/main.scss'],
+  // enable takeover mode
+  typescript: { shim: false },
   modules: [
     '@invictus.codes/nuxt-vuetify',
+    '@nuxtjs/google-fonts',
     '@nuxt/content'
   ],
+  app: {
+    baseURL: process.env.BASE_URL || '/',
+    head: {
+      title: 'Blog',
+      titleTemplate: '%s',
+      meta: [
+        { charset: 'utf-8' }
+      ]
+    }
+  },
   vuetify: {
     vuetifyOptions: {
       theme: {
         defaultTheme: 'dark',
         themes: {
           light: {
+            dark: false,
             colors: {
               background: '#f6f8fa',
-              primary: '#53a1b1',
-              secondary: '#68b2a0'
+              primary: '#00dc82'
             }
           },
           dark: {
+            dark: true,
             colors: {
-              background: '#0d0f14',
-              primary: '#53a1b1',
-              secondary: '#68b2a0'
+              background: '#212121',
+              primary: '#00dc82'
             }
           }
         }
@@ -30,11 +44,14 @@ export default defineNuxtConfig({
     },
     moduleOptions: {
       treeshaking: true,
+      useIconCDN: true,
       styles: 'sass'
     }
   },
-  content: {},
-  runtimeConfig: {
-    public: { baseUrl: process.env.NUXT_BASE_API_URL || '/' }
-  }
+  googleFonts: {
+    families: {
+      Poppins: true
+    }
+  },
+  content: {}
 })

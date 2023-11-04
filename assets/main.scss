@@ -2,3 +2,23 @@
   font-family: Poppins,  apple-system, Ubuntu, Cantarell, sans-serif;
 }
 
+// md
+#md {
+  margin: 28px 16px;
+}
+#md h1 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  color: rgb(var(--v-theme-primary));
+}
+#md p {
+  margin-bottom: 8px;
+}
+#md pre {
+  background: #161b22;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 4px 0;
+}
+// end md

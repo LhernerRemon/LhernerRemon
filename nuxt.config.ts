@@ -49,9 +49,17 @@ export default defineNuxtConfig({
     }
   },
   googleFonts: {
+    display: 'swap',
+    download: true,
     families: {
       Poppins: true
     }
   },
-  content: {}
+  content: {
+    defaultLocale: 'es',
+    highlight: {
+      preload: ['python'],
+      theme: 'github-dark'
+    }
+  }
 })

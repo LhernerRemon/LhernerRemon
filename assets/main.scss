@@ -6,14 +6,35 @@
 #md {
   margin: 28px 16px;
 }
-#md h1 {
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 32px;
-  color: rgb(var(--v-theme-primary));
-}
 #md p {
+  font-size: 1rem;
   margin-bottom: 8px;
+}
+#md h1 {
+  color: rgb(var(--v-theme-primary));
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+#md h2 {
+  color: rgb(var(--v-theme-primary));
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+#md h3 {
+  color: rgb(var(--v-theme-primary));
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+#md h4 {
+  color: rgb(var(--v-theme-primary));
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#md a {
+  text-decoration: none;
+  color: rgb(var(--v-theme-primary));
 }
 #md pre {
   background: #161b22;
@@ -21,4 +42,18 @@
   padding: 16px;
   margin: 4px 0;
 }
+#md ul {
+  margin: 1rem 0 1rem 32px;
+}
 // end md
+
+// Profile
+#profile img {
+  filter: drop-shadow(1px 1px 1px rgba(var(--v-theme-primary), 0.6));
+}
+
+@media (min-width: 1280px) {
+  .v-container {
+    max-width: 1000px !important;
+  }
+}

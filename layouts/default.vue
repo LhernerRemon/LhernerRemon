@@ -1,29 +1,40 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
+import ToggleDarkLight from '@/components/toggle-dark-light/ToggleDarkLight.vue'
+import LayoutActions from '@/components/layout/LayoutActions.vue'
+import LayoutSearch from '@/components/layout/LayoutSearch.vue'
 
 const theme = useTheme()
-const isDark = computed(() => theme.global.current.value.dark)
-const iconTheme = computed(() => (isDark.value ? 'mdi-weather-sunny' : 'mdi-weather-night'))
-const colorTheme = computed(() => (isDark.value ? 'primary' : 'grey'))
 
-const toggleTheme = () => { theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark' }
+const bgLayout = computed(() => theme.global.current.value.dark ? '#212121f2' : '#f6f8faf2')
+
 </script>
 
 <template>
   <VApp>
-    <VAppBar density="comfortable" elevation="1" color="transparent">
-      <v-toolbar-title>Blog</v-toolbar-title>
+    <VAppBar elevation="1" :color="bgLayout" height="90">
+      <VToolbarTitle>
+        <NuxtLink href="/">
+          <h3>Blog</h3>
+        </NuxtLink>
+      </VToolbarTitle>
       <v-spacer />
-      <VBtn variant="outlined" color="primary" to="/">
-        Home
-      </VBtn>
-      <VBtn icon="mdi-magnify" size="small" color="primary" />
-      <VBtn :icon="iconTheme" size="small" :color="colorTheme" @click="toggleTheme" />
+      <div class="d-flex align-center mr-10">
+        <LayoutActions />
+        <LayoutSearch />
+        <ToggleDarkLight />
+      </div>
     </VAppBar>
     <VMain>
-      <VContainer fluid>
-        <slot />
-      </VContainer>
+      <slot />
     </VMain>
   </VApp>
 </template>
+
+<style scoped>
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+</style>

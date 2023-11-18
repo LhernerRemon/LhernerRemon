@@ -29,10 +29,10 @@ Es una pendiente resbaladiza: pronto tendrá una larga lista de URL y ningún pa
 
 #### Mantenga su URL base simple e intuitiva
 
-Solo debe haber 2 URL base por recurso y deben estar en plural.
+Solo debe haber 1 URL base por recurso y deben estar en plural.
 
-| /dogs | /dogs/1234 |
-| --------- | --------- |
+- /dogs 
+- /dogs/1234
 
 #### Utilice verbos HTTP para operar en las colecciones y elementos
 
@@ -151,6 +151,13 @@ Hemos hablado de cosas que vienen después del dominio de nivel superior. Esta v
 
 #### CamelCase vs pascalCase vs snake_case
 
+::custom-image
+---
+url: "https://imgb.ifunny.co/images/7042ff298998e2ea8c70c35478541672166ec90170125b7479daa11ae234df37_1.jpg"
+max-width: 400
+---
+::
+
 A continuación, se muestran las respuestas de la API de algunas de las principales API:
 - **Bing** "DateTime": "2011-10-29T09:35:00Z" 
 - **Foursquare** "createdAt": 1320296464
@@ -164,21 +171,49 @@ A continuación, se muestran las respuestas de la API de algunas de las principa
 
 #### Autenticación
 
+::custom-image
+---
+url: "https://res.cloudinary.com/practicaldev/image/fetch/s--oiCy8FFt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://code.oursky.com/wp-content/uploads/2021/02/Screenshot-2021-02-09-at-4.15.21-PM-1-scaled.jpg"
+max-width: 400
+---
+::
+
 Las aplicaciones web o móviles que exponen API **no tienen que compartir contraseñas**. Permite al proveedor de API **revocar tokens** para un usuario individual, para una aplicación completa, sin requerir que el usuario cambie su contraseña original. 
 
 Esto es fundamental si un dispositivo móvil se ve comprometido o si se descubre una aplicación no autorizada.
 
 #### SSL
 
+::custom-image
+---
+url: "https://media.makeameme.org/created/ssl-ssl-everywhere-5bc9c7.jpg"
+max-width: 400
+---
+::
+
 Va a haber intercambio de mucha información sensible, como los token. SSL es de uso obligatorio y es gratis.
 
 #### Cache
+
+::custom-image
+---
+url: "https://miro.medium.com/v2/resize:fit:750/1*TRpMZdbDrdZxAOwWTZ_Kgw.jpeg"
+max-width: 400
+---
+::
 
 Una compensación fundamental en los sitios web dinámicos es que son dinámicos. Almacenar en caché algo es guardar el resultado de un **cálculo costoso** para que no tenga que realizar el cálculo la próxima vez.
 
 No vayas a realizar **las mismas consultas otra vez**.
 
 #### Limita las solicitudes
+
+::custom-image
+---
+url: "https://blog.careem.com/wp-content/uploads/2022/06/Blog_-Presto-Rate-Limiting_image3-1.png"
+max-width: 400
+---
+::
 
 La limitación es similar a los permisos, ya que determina si se debe autorizar una solicitud. Utiliza ‘limitadores’ para controlar la tasa de solicitudes que los clientes pueden realizar a tu API.
 

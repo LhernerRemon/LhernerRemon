@@ -28,6 +28,7 @@ export default defineNuxtConfig({
             dark: false,
             colors: {
               background: '#f6f8fa',
+              backgroundCodeLang: '#eceded',
               primary: '#00dc82'
             }
           },
@@ -35,6 +36,7 @@ export default defineNuxtConfig({
             dark: true,
             colors: {
               background: '#212121',
+              backgroundCodeLang: '#3a3a3a',
               primary: '#00dc82'
             }
           }

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const watchSearch = ref(false)
 const search = ref('')
 </script>

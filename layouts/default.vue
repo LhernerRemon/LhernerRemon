@@ -15,18 +15,18 @@ const drawer = ref(false)
 
 <template>
   <VApp>
-    <LayoutNavigationDrawer v-model="drawer"></LayoutNavigationDrawer>
+    <LayoutNavigationDrawer v-model="drawer" />
     <VAppBar elevation="1" :color="bgLayout" height="90">
       <VToolbarTitle>
-        <VBtn icon="mdi-menu" v-if="smAndDown" @click="drawer = !drawer"></VBtn>
-        <NuxtLink href="/" v-else>
+        <VBtn v-if="smAndDown" icon="mdi-menu" @click="drawer = !drawer" />
+        <NuxtLink v-else href="/">
           <h3>Blog</h3>
         </NuxtLink>
       </VToolbarTitle>
       <v-spacer />
       <div class="d-flex align-center mr-10">
         <LayoutActions v-if="!smAndDown" />
-        <LayoutSearch v-if="!smAndDown"/>
+        <LayoutSearch v-if="!smAndDown" />
         <ToggleDarkLight />
       </div>
     </VAppBar>

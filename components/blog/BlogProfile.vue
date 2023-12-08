@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   width: { type: [Number, String], default: () => 110 }
 })
 
@@ -14,5 +14,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <VImg id="profile" :src="imageUrl" :width="props.width" :max-width="props.width" />
+  <VImg id="profile" :src="imageUrl" :width="width" :max-width="width" />
 </template>

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-const emit = defineEmits(['scrollTo'])
+defineEmits(['scrollTo'])
 const props = defineProps({
-  data: { type: Array, default: () => [] }
+  data: { type: Array, default: () => null }
 })
 
-const tocLinks = computed(() => props.data.body?.toc?.links || [])
+const tocLinks = computed(() => props.data?.body?.toc?.links || [])
 </script>
 <template>
   <VNavigationDrawer location="right" floating>
     <VList lines="two">
-      <VListItem active-class="router-link-active"  v-for="toc in tocLinks" :key="toc.id" :to="`#${toc.id}`">
+      <VListItem v-for="toc in tocLinks" :key="toc.id" active-class="router-link-active" :to="`#${toc.id}`">
         {{ toc.text }}
       </VListItem>
     </VList>

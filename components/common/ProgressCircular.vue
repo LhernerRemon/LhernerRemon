@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   color: { type: String, default: 'primary' },
   size: { type: [Number, String], default: 65 },
   width: { type: [Number, String], default: 3 }
@@ -11,8 +11,8 @@ const props = defineProps({
     <VProgressCircular
       color="primary"
       indeterminate
-      :size="props.size"
-      :width="props.width"
+      :size="size"
+      :width="width"
     />
   </div>
 </template>

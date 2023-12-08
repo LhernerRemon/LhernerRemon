@@ -12,5 +12,5 @@ const openTarget = () => {
 </script>
 
 <template>
-  <VIcon size="35" :icon="props.icon" @click="openTarget" />
+  <VIcon size="35" :icon="icon" @click="openTarget" />
 </template>

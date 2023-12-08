@@ -6,11 +6,10 @@ const props = defineProps({
 })
 
 const dateFormated = computed(() => {
-  if (!props.data?.date) return ''
+  if (!props.data?.date) { return '' }
 
-  const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' }
   const date = new Date(props.data?.date)
-  return date.toLocaleDateString('es-ES', options)
+  return date.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
 })
 </script>
 

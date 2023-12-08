@@ -9,13 +9,12 @@ module.exports = {
     sourceType: 'module'
   },
   extends: [
-    '@nuxtjs/eslint-config',
-    'standard'
+    '@nuxtjs/eslint-config'
   ],
   plugins: [],
   rules: {
     'no-undef': 'off',
     'vue/multi-word-component-names': 'off',
-    noImplicitAny: false
+    'no-console': 'off'
   }
 }

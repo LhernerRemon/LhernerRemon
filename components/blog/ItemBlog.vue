@@ -6,11 +6,10 @@ const props = defineProps({
 })
 
 const dateFormated = computed(() => {
-  if (!props.post?.date) return ''
+  if (!props.post?.date) { return '' }
 
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
   const date = new Date(props.post?.date)
-  return date.toLocaleDateString('es-ES', options)
+  return date.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
 })
 </script>
 
@@ -18,7 +17,7 @@ const dateFormated = computed(() => {
   <VCard variant="tonal" color="#9b9b9b" class="mx-auto" width="800" rounded="xl">
     <VCardTitle class="ma-6 mb-2">
       <NuxtLink :to="post._path">
-        {{ props.post.title }}
+        {{ post.title }}
       </NuxtLink>
     </VCardTitle>
 
@@ -46,7 +45,7 @@ const dateFormated = computed(() => {
   </VCard>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 a {
   color: rgb(var(--v-theme-primary));
   text-decoration: none;

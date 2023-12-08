@@ -17,7 +17,10 @@ const socials = [
       <div class="d-flex justify-center align-center my-10">
         <IconSocial v-for="social in socials" :key="social.icon" :icon="social.icon" :link="social.link" />
       </div>
-      <ItemBlog v-for="post in posts" :key="post._id" :post="post" />
+
+      <div class="d-flex flex-column" style="gap: 10px;">
+        <ItemBlog  v-for="post in posts" :key="post._id" :post="post" />
+      </div>
     </div>
   </div>
 </template>

@@ -3,6 +3,6 @@
 
 <template>
   <div>
-    <h1>Categories</h1>
+    <h1>About me</h1>
   </div>
 </template>

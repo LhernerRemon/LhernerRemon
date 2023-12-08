@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     defaultLocale: 'es',
     highlight: {
       preload: ['python'],
-      theme: 'github-dark'
+      theme: 'monokai'
     }
   }
 })

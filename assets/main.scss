@@ -4,11 +4,12 @@
 
 // md
 #md {
-  margin: 28px 16px;
+  margin: 0px 16px;
 }
 #md p {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.1rem;
+  margin-top: 0.94em;
+  line-height: 32px;
 }
 #md h1 {
   color: rgb(var(--v-theme-primary));
@@ -40,7 +41,14 @@
   background: #161b22;
   border-radius: 5px;
   padding: 16px;
-  margin: 4px 0;
+  margin: 1em 0;
+  line-height: 1.7142857;
+}
+html .shiki span {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace !important;
+
 }
 #md ul {
   margin: 1rem 0 1rem 32px;

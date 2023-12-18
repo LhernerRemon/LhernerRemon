@@ -5,19 +5,12 @@ import BlogHeader from '@/components/blog/BlogHeader.vue'
 
 const route = useRoute()
 
-const loading = ref(false)
-const post = ref()
-onMounted(async () => {
-  loading.value = true
-  const { data } = await useAsyncData(`content-${route.path}`, () => queryContent().where({ _path: route.path }).findOne())
-  post.value = data.value
-  loading.value = false
-})
+const { data: post, pending } = await useLazyAsyncData(`content-${route.path}`, () => queryContent().where({ _path: route.path }).findOne())
 </script>
 
 <template>
   <div>
-    <ProgressCircular v-if="loading" />
+    <ProgressCircular v-if="pending" />
     <main v-else>
       <BlogHeader :data="post" />
       <div v-if="post" class="d-flex">

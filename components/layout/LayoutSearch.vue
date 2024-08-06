@@ -12,13 +12,19 @@ const search = ref('')
           color="primary"
           label="Buscar"
           variant="underlined"
+          hide-details
           clearable
           density="compact"
           @click:clear="watchSearch = false"
         />
       </div>
     </VExpandXTransition>
-    <VBtn class="mx-2" icon="mdi-magnify" size="small" color="primary" @click="watchSearch = !watchSearch" />
+    <VBtn
+      class="mx-2"
+      icon="mdi-magnify"
+      size="small"
+      color="primary"
+      @click="watchSearch = !watchSearch" />
   </div>
 </template>
 
